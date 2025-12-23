@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
               <img 
                 src="kalp-logo.png" 
                 alt="Kalp Money Logo" 
-                className="h-10 sm:h-12 w-auto object-contain brightness-0 invert"
+                className="h-10 sm:h-12 w-auto object-contain"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.style.display = 'none';
