@@ -1,28 +1,17 @@
 import React from 'react';
 
-// Import all images with correct case sensitivity
-import hdfcLogo from '../Assets/hdfc.png';
-import iciciLogo from '../Assets/icici.png';
-import sbiLogo from '../Assets/sbi.png';
-import axisLogo from '../Assets/axis.png';
-import kotakLogo from '../Assets/kotak.png';
-import yesLogo from '../Assets/yes.png';
-import indusindLogo from '../Assets/IndusInd.png';
-import bajajLogo from '../Assets/bajaj.png';
-import pnbLogo from '../Assets/pnb.png';
-import idfcLogo from '../Assets/idfc.png';
-
+// Use direct paths for Vercel deployment
 const banks = [
-  { name: "HDFC Bank", logo: hdfcLogo },
-  { name: "ICICI Bank", logo: iciciLogo },
-  { name: "SBI", logo: sbiLogo },
-  { name: "Axis Bank", logo: axisLogo },
-  { name: "Kotak", logo: kotakLogo },
-  { name: "Yes Bank", logo: yesLogo },
-  { name: "IndusInd", logo: indusindLogo },
-  { name: "Bajaj Finance", logo: bajajLogo },
-  { name: "PNB", logo: pnbLogo },
-  { name: "IDFC", logo: idfcLogo }
+  { name: "HDFC Bank", logo: "/Assets/hdfc.png" },
+  { name: "ICICI Bank", logo: "/Assets/icici.png" },
+  { name: "SBI", logo: "/Assets/sbi.png" },
+  { name: "Axis Bank", logo: "/Assets/axis.png" },
+  { name: "Kotak", logo: "/Assets/kotak.png" },
+  { name: "Yes Bank", logo: "/Assets/yes.png" },
+  { name: "IndusInd", logo: "/Assets/IndusInd.png" },
+  { name: "Bajaj Finance", logo: "/Assets/bajaj.png" },
+  { name: "PNB", logo: "/Assets/pnb.png" },
+  { name: "IDFC", logo: "/Assets/idfc.png" }
 ];
 
 const TrustBar: React.FC = () => {
