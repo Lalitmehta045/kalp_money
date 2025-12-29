@@ -15,9 +15,22 @@ export default defineConfig(({ mode }) => {
         'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
       },
       resolve: {
-        alias: {
-          '@': path.resolve(__dirname, '.'),
-        }
+        alias: [
+          { find: '@', replacement: path.resolve(__dirname, '.') },
+          { find: /^~(.+)/, replacement: path.resolve(__dirname, 'node_modules/$1') },
+        ],
+        extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.png', '.jpg', '.jpeg', '.svg']
+      },
+      build: {
+        outDir: 'dist',
+        assetsDir: 'assets',
+        rollupOptions: {
+          output: {
+            assetFileNames: 'assets/[name][extname]',
+            chunkFileNames: 'assets/[name].[hash].js',
+            entryFileNames: 'assets/[name].[hash].js',
+          },
+        },
       }
     };
 });
