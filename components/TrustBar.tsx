@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 // Import all images with correct case sensitivity
